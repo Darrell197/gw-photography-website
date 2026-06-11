@@ -1,7 +1,49 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 
 export default function Contact() {
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    date: "",
+    message: "",
+  });
+
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setSending(true);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (response.ok) {
+      alert("Thank you! Your enquiry has been sent.");
+      setForm({
+        name: "",
+        email: "",
+        date: "",
+        message: "",
+      });
+    } else {
+      alert("Something went wrong.");
+    }
+
+    setSending(false);
+  };
+
   return (
+    
     <main className="min-h-screen bg-black text-white">
       <Navbar />
 
@@ -125,61 +167,76 @@ export default function Contact() {
 
           {/* FORM */}
 
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-            }}
-          >
-            <input
-              type="text"
-              placeholder="Your Name"
-              style={{
-                background: "transparent",
-                border: "1px solid rgba(255,255,255,0.15)",
-                padding: "18px",
-                color: "#fff",
-                fontSize: "1rem",
-              }}
-            />
+         <form
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+  }}
+>
+       <input
+  type="text"
+  placeholder="Your Name"
+  value={form.name}
+  onChange={(e) =>
+    setForm({ ...form, name: e.target.value })
+  }
+  style={{
+    background: "transparent",
+    border: "1px solid rgba(255,255,255,0.15)",
+    padding: "18px",
+    color: "#fff",
+    fontSize: "1rem",
+  }}
+/>
+<input
+  type="email"
+  placeholder="Email Address"
+  value={form.email}
+  onChange={(e) =>
+    setForm({ ...form, email: e.target.value })
+  }
+  style={{
+    background: "transparent",
+    border: "1px solid rgba(255,255,255,0.15)",
+    padding: "18px",
+    color: "#fff",
+    fontSize: "1rem",
+  }}
+/>
 
             <input
-              type="email"
-              placeholder="Email Address"
-              style={{
-                background: "transparent",
-                border: "1px solid rgba(255,255,255,0.15)",
-                padding: "18px",
-                color: "#fff",
-                fontSize: "1rem",
-              }}
-            />
-
-            <input
-              type="text"
-              placeholder="Wedding / Event Date"
-              style={{
-                background: "transparent",
-                border: "1px solid rgba(255,255,255,0.15)",
-                padding: "18px",
-                color: "#fff",
-                fontSize: "1rem",
-              }}
-            />
-
-            <textarea
-              placeholder="Tell me about your plans..."
-              rows={8}
-              style={{
-                background: "transparent",
-                border: "1px solid rgba(255,255,255,0.15)",
-                padding: "18px",
-                color: "#fff",
-                fontSize: "1rem",
-                resize: "vertical",
-              }}
-            />
+  type="text"
+  placeholder="Wedding / Event Date"
+  value={form.date}
+  onChange={(e) =>
+    setForm({ ...form, date: e.target.value })
+  }
+  style={{
+    background: "transparent",
+    border: "1px solid rgba(255,255,255,0.15)",
+    padding: "18px",
+    color: "#fff",
+    fontSize: "1rem",
+  }}
+/>
+           <textarea
+  placeholder="Tell me about your plans..."
+  rows={8}
+  value={form.message}
+  onChange={(e) =>
+    setForm({ ...form, message: e.target.value })
+  }
+  style={{
+    background: "transparent",
+    border: "1px solid rgba(255,255,255,0.15)",
+    padding: "18px",
+    color: "#fff",
+    fontSize: "1rem",
+    resize: "vertical",
+  }}
+/>
 
             <button
               type="submit"
@@ -194,7 +251,7 @@ export default function Contact() {
                 fontWeight: "500",
               }}
             >
-              Send Enquiry
+             {sending ? "Sending..." : "Send Enquiry"}
             </button>
           </form>
         </div>
