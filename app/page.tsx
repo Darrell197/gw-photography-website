@@ -205,12 +205,13 @@ export default function Home() {
     />
 
     <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "24px",
-      }}
-    >
+  className="homepage-two-image-grid"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "24px",
+  }}
+>
       <img
         src="/images/ballongirl.jpg"
         alt="Wedding Photography"

@@ -63,3 +63,13 @@ img {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .homepage-two-image-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .homepage-two-image-grid img {
+    height: 500px !important;
+  }
+}
