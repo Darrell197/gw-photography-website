@@ -155,6 +155,7 @@ export default function Home() {
       </section>
       
 <section
+  className="homepage-section"
   style={{
     padding: "80px 80px",
     backgroundColor: "#000",
@@ -303,12 +304,13 @@ export default function Home() {
     />
 
     <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "24px",
-      }}
-    >
+  className="homepage-two-image-grid"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "24px",
+  }}
+>
       <img
         src="/images/3girlsout.JPG"
         alt="Events Photography"
@@ -351,6 +353,7 @@ export default function Home() {
   </div>
 </section>
 <section
+  className="homepage-section"
   style={{
     padding: "80px 80px",
     backgroundColor: "#000",
@@ -399,12 +402,13 @@ export default function Home() {
     />
 
     <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "24px",
-      }}
-    >
+  className="homepage-two-image-grid"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "24px",
+  }}
+>
       <img
         src="/images/point.jpg"
         alt="Lifestyle Photography"
