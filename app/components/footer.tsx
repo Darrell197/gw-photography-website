@@ -92,7 +92,7 @@ export default function Footer() {
             marginBottom: "15px",
           }}
         >
-          Cornwall, United Kingdom
+          Manchester north west, United Kingdom
         </p>
 
         <p
