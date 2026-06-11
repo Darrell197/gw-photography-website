@@ -256,6 +256,7 @@ export default function Home() {
   </div>
 </section>
 <section
+  className="homepage-section"
   style={{
     padding: "80px 80px",
     backgroundColor: "#050505",
@@ -452,6 +453,110 @@ export default function Home() {
   </div>
 </section>
 <section
+  className="homepage-section"
+  style={{
+    padding: "80px 80px",
+    backgroundColor: "#050505",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1400px",
+      margin: "0 auto",
+    }}
+  >
+    <p
+      style={{
+        color: "#D6C2A1",
+        letterSpacing: "8px",
+        textTransform: "uppercase",
+        marginBottom: "20px",
+      }}
+    >
+      Studio
+    </p>
+
+    <h2
+      style={{
+        fontSize: "clamp(3rem, 7vw, 6rem)",
+        fontWeight: "300",
+        lineHeight: "1",
+        marginBottom: "60px",
+        maxWidth: "900px",
+      }}
+    >
+      Creative portraits,
+      <br />
+      crafted with style.
+    </h2>
+
+    <img
+      src="/images/studio/4O1A0250 (3).jpg"
+      alt="Studio Photography"
+      style={{
+        width: "100%",
+        height: "700px",
+        objectFit: "cover",
+        marginBottom: "24px",
+      }}
+    />
+
+    <div
+      className="homepage-two-image-grid"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "24px",
+      }}
+    >
+      <img
+        src="/images/studio/IMG_0840 (3).JPG"
+        alt="Studio Photography"
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+        }}
+      />
+
+      <img
+        src="/images/studio/IMG_4492 (3).JPG"
+        alt="Studio Photography"
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+        }}
+      />
+    </div>
+
+    <div
+      style={{
+        marginTop: "40px",
+      }}
+    >
+      <Link
+        href="/portfolio/studio"
+        style={{
+          color: "#D6C2A1",
+          textDecoration: "none",
+          textTransform: "uppercase",
+          letterSpacing: "3px",
+          fontSize: "14px",
+        }}
+      >
+        Explore Studio
+      </Link>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section
   style={{
     backgroundColor: "#000",
     padding: "180px 40px",
@@ -520,119 +625,7 @@ export default function Home() {
   </div>
 </section>
 
-<footer
-  style={{
-    backgroundColor: "#050505",
-    borderTop: "1px solid rgba(214,194,161,0.15)",
-    padding: "60px 40px",
-  }}
->
-  <div
-    style={{
-      maxWidth: "1400px",
-      margin: "0 auto",
-    }}
-  >
-    {/* TOP ROW */}
 
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: "20px",
-        marginBottom: "40px",
-      }}
-    >
-      <img
-        src="/images/gw-logo-gold.png"
-        alt="GW Photography"
-        style={{
-          width: "100px",
-        }}
-      />
-
-      <h3
-        style={{
-          color: "#D6C2A1",
-          fontWeight: "300",
-          fontSize: "24px",
-          margin: 0,
-        }}
-      >
-        Grace Westray Photography
-      </h3>
-
-      <p
-        style={{
-          color: "#999",
-          margin: 0,
-        }}
-      >
-        Manchester, UK
-      </p>
-    </div>
-
-    {/* NAVIGATION */}
-
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: "40px",
-        flexWrap: "wrap",
-        marginBottom: "40px",
-      }}
-    >
-     <Link href="/portfolio/weddings">
-  Weddings
-</Link>
-
-<Link href="/portfolio/events">
-  Events
-</Link>
-
-<Link href="/portfolio/lifestyle">
-  Lifestyle
-</Link>
-
-<Link href="/contact">
-  Contact
-</Link>
-
-      <a
-        href="#"
-        style={{
-          color: "#D6C2A1",
-          textDecoration: "none",
-        }}
-      >
-        Instagram
-      </a>
-    </div>
-
-    {/* COPYRIGHT */}
-
-    <div
-      style={{
-        borderTop: "1px solid rgba(255,255,255,0.08)",
-        paddingTop: "25px",
-        textAlign: "center",
-      }}
-    >
-      <p
-        style={{
-          color: "#666",
-          fontSize: "14px",
-          margin: 0,
-        }}
-      >
-        © 2025 Grace Westray Photography
-      </p>
-    </div>
-  </div>
-</footer>
     </main>
   );
 }
