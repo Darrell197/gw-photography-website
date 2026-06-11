@@ -94,3 +94,17 @@ img {
     gap: 40px !important;
   }
 }
+@media (max-width: 768px) {
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .about-image {
+    min-height: 400px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+}

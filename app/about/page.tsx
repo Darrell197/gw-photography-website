@@ -9,7 +9,7 @@ export default function About() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "120px 40px",
+          padding: "120px 20px",
         }}
       >
         <p
@@ -37,6 +37,7 @@ export default function About() {
         </h1>
 
         <div
+         className="about-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
