@@ -1,17 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { client } from "../../../sanity/lib/client";
-import { urlFor } from "../../../sanity/lib/image";
 
-export default async function Studio() {
-  const studio = await client.fetch(`
-    *[_type == "studio"][0]{
-      title,
-      featuredImage,
-      galleryImages
-    }
-  `);
-
+export default function Studio() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
@@ -68,23 +58,67 @@ export default async function Studio() {
           padding: "0 40px 120px",
         }}
       >
-        <div className="gallery-grid">
-          {studio?.galleryImages?.map((image: any, index: number) => (
-            <img
-              key={index}
-              src={urlFor(image).url()}
-              alt="Studio"
-              style={{
-                width: "100%",
-                aspectRatio: "1 / 1",
-                objectFit: "cover",
-                display: "block",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-              }}
-            />
-          ))}
-        </div>
+       <div className="gallery-grid">
+  <img src="/images/studio/4O1A0250 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A0328 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A0358 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A0897 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A1548 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A1565 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A1601 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A1726 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A1743 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A1830 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A2024 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A2033 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A2093 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A2140 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A2380 (3).jpg" alt="Studio" />
+
+  <img src="/images/studio/4O1A6527 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A6543 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A6576 (3).jpg" alt="Studio" />
+  <img src="/images/studio/4O1A6660 (3).jpg" alt="Studio" />
+
+  <img src="/images/studio/IMG_0840 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0842 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0844 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0854 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0857 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0861 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0862 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0872 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0875 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0884 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0897 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_0903 (3).JPG" alt="Studio" />
+
+  <img src="/images/studio/IMG_1966 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_1967 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_1968 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_1970 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_1973 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_1975 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_2001 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_2004 (3).JPG" alt="Studio" />
+
+  <img src="/images/studio/IMG_3531 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_3532 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_3535 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_3544 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_3546 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_3549 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_3556 (3).JPG" alt="Studio" />
+
+  <img src="/images/studio/IMG_4492 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_4493 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_4498 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_4500 (3).JPG" alt="Studio" />
+  <img src="/images/studio/IMG_4517 (2).JPG" alt="Studio" />
+</div>
+
+
+       
       </section>
 
       {/* CTA */}

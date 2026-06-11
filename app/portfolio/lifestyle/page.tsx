@@ -1,17 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { client } from "../../../sanity/lib/client";
-import { urlFor } from "../../../sanity/lib/image";
 
-export default async function Lifestyle() {
-  const lifestyle = await client.fetch(`
-    *[_type == "lifestyle"][0]{
-      title,
-      featuredImage,
-      galleryImages
-    }
-  `);
-
+export default function Lifestyle() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
@@ -22,7 +12,7 @@ export default async function Lifestyle() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "180px 40px 60px",
+         padding: "100px 40px 60px",
         }}
       >
         <p
@@ -71,23 +61,28 @@ export default async function Lifestyle() {
           padding: "0 40px 120px",
         }}
       >
-        <div className="gallery-grid">
-          {lifestyle?.galleryImages?.map((image: any, index: number) => (
-            <img
-              key={index}
-              src={urlFor(image).url()}
-              alt="Lifestyle"
-              style={{
-                width: "100%",
-                aspectRatio: "1 / 1",
-                objectFit: "cover",
-                display: "block",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-              }}
-            />
-          ))}
-        </div>
+       <div className="gallery-grid">
+  <img src="/images/lifestyle/4O1A2495.jpg" alt="Lifestyle" />
+  <img src="/images/lifestyle/4O1A3199.jpg" alt="Lifestyle" />
+  <img src="/images/lifestyle/4O1A3235.jpg" alt="Lifestyle" />
+  <img src="/images/lifestyle/4O1A3327.jpg" alt="Lifestyle" />
+  <img src="/images/lifestyle/4O1A3379.jpg" alt="Lifestyle" />
+  <img src="/images/lifestyle/4O1A3475.jpg" alt="Lifestyle" />
+
+  <img src="/images/lifestyle/5U8A9700.JPG" alt="Lifestyle" />
+
+  <img src="/images/lifestyle/image0 (3).jpeg" alt="Lifestyle" />
+  <img src="/images/lifestyle/image2.JPG" alt="Lifestyle" />
+
+  <img src="/images/lifestyle/IMG_0321.JPG" alt="Lifestyle" />
+  <img src="/images/lifestyle/IMG_0337.JPG" alt="Lifestyle" />
+
+
+
+  <img src="/images/lifestyle/IMG_2228.JPG" alt="Lifestyle" />
+  <img src="/images/lifestyle/IMG_2231.JPG" alt="Lifestyle" />
+</div>
+
       </section>
 
       {/* CTA */}

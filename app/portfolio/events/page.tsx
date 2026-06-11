@@ -1,17 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
 
-
-export default async function Events() {
-const event = await client.fetch(`
-  *[_type == "event"][0]{
-    title,
-    galleryImages
-  }
-`)
-
+export default function Events() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
@@ -86,40 +76,37 @@ const event = await client.fetch(`
         </p>
       </section>
 
-      {/* GALLERY */}
+   {/* GALLERY */}
 
-      <section
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 40px 120px",
-        }}
-      >
-        {/* FEATURE IMAGE */}
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "0 40px 120px",
+  }}
+>
+  <div className="gallery-grid">
 
-       
+    <img src="/images/events/IMG_2282.JPG" alt="Event" />
+    <img src="/images/events/IMG_2301.JPG" alt="Event" />
+    <img src="/images/events/IMG_2430.JPG" alt="Event" />
+    <img src="/images/events/IMG_2549.JPG" alt="Event" />
+    <img src="/images/events/IMG_2684.jpg" alt="Event" />
+    <img src="/images/events/IMG_2916.JPG" alt="Event" />
+    <img src="/images/events/IMG_3054.JPG" alt="Event" />
+    <img src="/images/events/IMG_3648.JPG" alt="Event" />
+    <img src="/images/events/IMG_3656.JPG" alt="Event" />
+    <img src="/images/events/IMG_4325.JPG" alt="Event" />
+    <img src="/images/events/IMG_4359.JPG" alt="Event" />
+    <img src="/images/events/IMG_4371.JPG" alt="Event" />
+    <img src="/images/events/IMG_4520.JPG" alt="Event" />
+    <img src="/images/events/IMG_4521.JPG" alt="Event" />
+    <img src="/images/events/IMG_4883.JPG" alt="Event" />
+    <img src="/images/events/IMG_4895.JPG" alt="Event" />
+    <img src="/images/events/IMG_5123.JPG" alt="Event" />
 
-        {/* GRID */}
-<div className="gallery-grid">
-  {event?.galleryImages?.map((image: any, index: number) => (
-    <img
-      key={index}
-      src={urlFor(image).url()}
-      alt="Event"
-      style={{
-        width: "100%",
-        aspectRatio: "1 / 1",
-        objectFit: "cover",
-        display: "block",
-        transition: "all 0.3s ease",
-        cursor: "pointer",
-      }}
-    />
-  ))}
-</div>
-        
-      </section>
-
+  </div>
+</section>
       {/* CTA */}
 
       <section

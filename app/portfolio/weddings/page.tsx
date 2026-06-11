@@ -1,17 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { client } from "../../../sanity/lib/client";
-import { urlFor } from "../../../sanity/lib/image";
 
-export default async function Weddings() {
-const wedding = await client.fetch(`
-  *[_type == "wedding"][0]{
-    title,
-    featuredImage,
-    galleryImages
-  }
-`)
-
+export default function Weddings() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
@@ -96,23 +86,45 @@ const wedding = await client.fetch(`
           padding: "0 40px 120px",
         }}
       >
-      <div className="gallery-grid">
-  {wedding?.galleryImages?.map((image: any, index: number) => (
-    <img
-      key={index}
-      src={urlFor(image).url()}
-      alt="Wedding"
-      style={{
-        width: "100%",
-        aspectRatio: "1 / 1",
-        objectFit: "cover",
-        display: "block",
-        transition: "all 0.3s ease",
-        cursor: "pointer",
-      }}
-    />
-  ))}
+       <div className="gallery-grid">
+  <img src="/images/weddings/4O1A4265.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A5523.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A5526.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A5724.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A7835.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A7869.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A7875.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A7918.jpg" alt="Wedding" />
+
+  <img src="/images/weddings/4O1A8113.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A8331.jpg" alt="Wedding" />
+  <img src="/images/weddings/4O1A8487.jpg" alt="Wedding" />
+
+  <img src="/images/weddings/IMG_1194.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_1196.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_1207.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_1224.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_1236.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_1240.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_1257.JPG" alt="Wedding" />
+
+  <img src="/images/weddings/IMG_4559.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4565.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4569.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4580.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4583.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4586.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4588.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4591.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4607.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4610.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4611.jpg" alt="Wedding" />
+  <img src="/images/weddings/IMG_4614.JPG" alt="Wedding" />
+  <img src="/images/weddings/IMG_4615.JPG" alt="Wedding" />
+
+
 </div>
+
       </section>
 
       {/* CTA */}

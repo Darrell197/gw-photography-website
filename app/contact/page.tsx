@@ -85,7 +85,7 @@ export default function Contact() {
               </p>
 
               <p style={{ color: "#999" }}>
-                hello@gracewestrayphotography.com
+                westraygrace@gmail.com
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function Contact() {
               </p>
 
               <p style={{ color: "#999" }}>
-                @gracewestrayphotography
+                gracewestray.hy
               </p>
             </div>
           </div>
