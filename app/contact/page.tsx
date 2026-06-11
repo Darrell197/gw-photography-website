@@ -74,10 +74,9 @@ export default function Contact() {
             maxWidth: "900px",
           }}
         >
-          Let's create
-          something beautiful.
+          From Here We Can Create Our Perfect Visions
         </h1>
-
+         Memories that last On Film Forever Are Priceless
         <p
           style={{
             color: "#999",
