@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import AboutGrace from "./components/AboutGrace";
 
 
 
@@ -553,7 +554,7 @@ export default function Home() {
 
 
 
-
+<AboutGrace />
 
 
 <section

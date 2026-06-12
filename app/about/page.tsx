@@ -46,7 +46,7 @@ export default function About() {
           }}
         >
          <img
-  src="/images/grace.jpeg"
+  src="/images/gracecamera.jpg"
   alt="Grace Westray"
   style={{
     width: "100%",
