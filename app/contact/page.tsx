@@ -159,7 +159,7 @@ export default function Contact() {
               </p>
 
               <p style={{ color: "#999" }}>
-                gracewestray.hy
+                @gwphotograph.hy
               </p>
             </div>
           </div>
