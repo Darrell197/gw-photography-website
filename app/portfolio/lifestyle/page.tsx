@@ -71,7 +71,7 @@ export default function Lifestyle() {
 
   <img src="/images/lifestyle/5U8A9700.JPG" alt="Lifestyle" />
 
-  <img src="/images/lifestyle/image0 (3).jpeg" alt="Lifestyle" />
+
   <img src="/images/lifestyle/image2.JPG" alt="Lifestyle" />
 
   <img src="/images/lifestyle/IMG_0321.JPG" alt="Lifestyle" />
