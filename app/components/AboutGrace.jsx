@@ -12,7 +12,7 @@ export default function AboutGrace() {
 
           <div className="max-w-md mx-auto lg:max-w-none">
             <img
-              src="/images/grace.JPeg"
+              src="/images/gracecamera.jpg"
               alt="Grace Westray"
               className="w-full h-[500px] object-cover"
             />
